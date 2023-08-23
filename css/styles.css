@@ -16,17 +16,18 @@ Variables
   --clr-primary-1: hsl(43, 86%, 17%);
   --clr-primary-2: hsl(43, 77%, 27%);
   --clr-primary-3: hsl(43, 72%, 37%);
-  --clr-primary-4: hsl(42, 63%, 48%);
+  --clr-primary-4: rgb(200, 153, 45);
   /* primary/main color */
   --clr-primary-5: hsl(42, 78%, 60%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(43, 89%, 70%);
+  --clr-primary-6: #f7d06e;
   --clr-primary-7: hsl(43, 90%, 76%);
   --clr-primary-8: hsl(45, 86%, 81%);
   --clr-primary-9: hsl(45, 90%, 88%);
-  --clr-primary-10: hsl(45, 100%, 96%);
+  --clr-primary-10:hsl(45, 100%, 96%);
+  
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-1: #102a42;
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
@@ -45,8 +46,49 @@ Variables
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px; 
+}
+/*dark mode*/
+[data-theme='dark'] {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(43, 77%, 83%);
+  --clr-primary-2: hsl(43, 72%, 73%);
+  --clr-primary-3: hsl(43, 78%, 63%);
+  --clr-primary-4: hsl(42, 72%, 40%);
+  /* primary/main color */
+  --clr-primary-5: hsl(43, 90%, 40%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(43, 78%, 30%);
+  --clr-primary-7: hsl(43, 86%, 24%);
+  --clr-primary-8: hsl(45, 90%, 12%);
+  --clr-primary-9: hsl(45, 86%, 11%);
+  --clr-primary-10: hsl(45, 100%, 4%);
+  
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(210, 36%, 96%);
+  --clr-grey-2: hsl(212, 33%, 71%);
+  --clr-grey-3: hsl(210, 31%, 60%);
+  --clr-grey-4: hsl(211, 27%, 50%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(209, 23%, 40%);
+  --clr-grey-6: hsl(210, 22%, 31%);
+  --clr-grey-7: hsl(209, 28%, 20%);
+  --clr-grey-8: hsl(209, 34%, 10%);
+  --clr-grey-9: hsl(211, 39%, 7%);
+  --clr-grey-10: hsl(212, 43%, 3%);
+  --clr-white: #333; /*this turns "white" to a readable "grey" on a dark background*/ 
+  
+  /* other properties remain unchanged */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  --dark-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
   --max-width: 1170px;
 }
+
 /*
 =============== 
 Global Styles
@@ -73,9 +115,10 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.nav-logo) {
-  width: 100%;
-  display: block;
+.nav-logo {
+  width: 25%;
+  display: inline-block;
+  position: relative;
 }
 
 h1,
@@ -127,8 +170,113 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
+/*dark mode button*/
+.dark-mode-switch {
+  position: absolute; /* To position it on top-right of the screen */
+  display: flex;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;   /* To ensure it's above other elements */
+}
 
+#darkModeToggle {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  margin-right: 5px;
+}
+
+.toggle {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+#darkModeToggle:checked + .toggle {
+  background-color: #000; /* Change to any color you want for dark mode */
+}
+
+#darkModeToggle:checked + .toggle::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+/*smaller screens*/
+/* Default styles for larger screens */
+.dark-mode-switch {
+  position: fixed; 
+  top: 10px;
+  right: 10px;
+  z-index: 1000; 
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .dark-mode-switch {
+      top: 5px;
+      right: 5px;
+  }
+
+  .toggle {
+      width: 40px;
+      height: 20px;
+  }
+
+  .toggle::after {
+      width: 16px;
+      height: 16px;
+  }
+}
+
+@media (max-width: 768px) {  /* Adjust the breakpoint as needed */
+  .dark-mode-toggle {
+    position: absolute;  /* or relative, if the sidebar has a set height */
+    bottom: 10px;        /* space from the bottom */
+    right: 10px;         /* adjust if you want space from the right side, or change to 'left' if you prefer */
+  }
+}
+
+.larger-screens {
+  display: block;  /* Display by default */
+}
+
+.smaller-screens {
+  display: none;  /* Hide by default */
+}
+
+@media (max-width: 768px) {
+  .larger-screens {
+    display: none; /* Hide the large button */
+  }
+  
+  .smaller-screens{
+    display: block; /* Show the small button */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+
+
+
+/*  global classes */
 .btn {
   text-transform: uppercase;
   background: var(--clr-primary-5);
@@ -315,7 +463,7 @@ Sidebar
   font-size: 1.5rem;
   color: var(--clr-grey-1);
   -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-animation: var(--transition);
 }
 .social-icon:hover {
   color: var(--clr-primary-5);
@@ -365,6 +513,7 @@ Hero
 .hero-btn {
   margin-top: 1.25rem;
 }
+
 @media screen and (min-width: 992px) {
   .hero-img {
     display: block;
@@ -394,6 +543,8 @@ Hero
   border-radius: var(--radius);
   position: relative;
 }
+
+
 /*
 =============== 
 About
@@ -414,6 +565,8 @@ About
 .about-img {
   justify-self: center;
 }
+
+
 @media screen and (min-width: 992px) {
   .about-center {
     grid-template-columns: 1fr 1fr;
@@ -442,6 +595,11 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  width: 100%;
+}
+
+.section bg-grey{
+  width: 100%;
 }
 .service-icon {
   font-size: 2rem;
@@ -481,6 +639,15 @@ Services
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+  align-items: center;
+}
+
 /* talk about small screen 
 without grid different setup */
 /*
@@ -671,65 +838,91 @@ Connect
 Skills
 ===============
 */
-@media screen and (min-width: 768px) {
-  .skills-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem;
+.skills{
+  background-color: var(--clr-primary-10);
+}
+
+.skills h2{
+  text-align: center;
+}
+
+.skill-item {
+  background-color: var(--clr-white);
+  border: none;
+  height: 120px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  border-radius: 30px;
+
+}
+
+.skill-item img {
+  width: 2rem; /* Adjust as necessary */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.skill-item i {
+  font-size: 2rem; /* Adjust the size of the icon */
+  margin-bottom: 10px; /* Space between the icon and the text */
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
   }
 }
-.skills {
-  background: var(--clr-primary-9);
+
+@media (max-width: 480px) {
+  .skills-grid {
+      grid-template-columns: (3, 1fr);
+  }
 }
-.skills h3 {
-  margin: 1.5rem 0;
-  color: var(--clr-primary-1);
+
+@media (max-width: 480px) {
+  .skill-item img {
+      width: 1.5rem; /* adjust as necessary */
+  }
+
+  .skill-item p {
+      font-size: 0.9rem; /* adjust as necessary */
+  }
 }
-.skill {
-  margin-bottom: 1.25rem;
+
+.skill-item {
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
-.skill p {
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-  color: var(--clr-primary-1);
+
+.skill-item:hover {
+  transform: translateY(-10px);
 }
-.skill-container {
-  background: var(--clr-white);
-  height: 1rem;
-  width: 100%;
-  border-radius: var(--radius);
-  position: relative;
+
+@media (max-width: 768px) {
+  .skill-item:hover {
+      transform: translateY(-5px);
+  }
 }
-.skill-value {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--clr-primary-5);
-  height: 100%;
-  width: 50%;
-  border-radius: var(--radius);
-}
-.value-70 {
-  width: 70%;
-}
-.value-80 {
-  width: 80%;
-}
-.skill-text {
-  position: absolute;
-  top: -2rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.skill-text-70 {
-  left: 70%;
-}
-.skill-text-80 {
-  left: 80%;
-}
+
+
+
 /*
 =============== 
 Timeline
@@ -819,8 +1012,9 @@ Blog
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
-  -webkit-transform: translate3d(0, 0, 0);
   visibility: visible;
+  transform: translate3d(0, 0, 0);
+
 }
 .card-front {
   background: var(--clr-white);
@@ -924,7 +1118,7 @@ Single Page
 
 /*
 =============== 
-Products Page
+Projects Page
 ===============
 */
 .projects-hero {
@@ -932,21 +1126,35 @@ Products Page
   background: var(--clr-primary-10);
   display: grid;
   place-items: center;
+  margin-left: 40px;
 }
+
+
+
 .projects-hero .section-title {
   margin-bottom: 0;
 }
+
 .single-project {
   background: var(--clr-grey-10);
   border-radius: var(--radius);
+  box-shadow:  5px 5px 10px 0px #888888;  
 }
+
 .project-container img {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 .project-container {
-  position: relative;
+  position: relative; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
+
 .project-icon {
   position: absolute;
   font-size: 1.75rem;
@@ -985,4 +1193,72 @@ Products Page
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 3rem 1rem;
+  margin-bottom: 40px;
+}
+
+
+
+/*
+================
+Contact button
+================
+*/
+
+.centered-item{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+.button-3d {
+  background-color: var(--clr-primary-5); /* Color of the button */
+  border: 20px;
+  color: white; /* Text color */
+  padding: 10px 20px; 
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  
+  /* This gives the button its 3D effect */
+  box-shadow: 0 5px var(--clr-grey-5); /* The color is a darker shade of the button color */
+  position: relative;
+  top: 0;
+  
+  /* Transition for smooth effect when pressed */
+  transition: top 0.1s;
+}
+
+/* When the button is pressed, it moves down slightly */
+.button-3d:active {
+  top: 5px;
+  box-shadow: 0 0 #2980b9; /* The shadow disappears when button is pressed */
+}
+
+.button-3d p{
+  color: var(--clr-primary-1);
+  font-family: system-ui, -apple-system,
+   BlinkMacSystemFont, 'Segoe UI',
+   Roboto, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+}
+
+.button-3d:hover{
+  color: var(--clr-primary-3);
+  background: var(--clr-primary-7);
+}
+
+/* Dark Mode Button */
+[data-theme='dark'] .button-3d {
+  background-color: white;
+  color: var(--clr-white);
+}
+
+[data-theme='dark'] .button-3d:hover {
+  background-color: var(--clr-primary-10);
 }

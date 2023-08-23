@@ -3,6 +3,16 @@ const navBtn = document.querySelector("#nav-btn");
 const closeBtn = document.querySelector("#close-btn");
 const sidebar = document.querySelector("#sidebar");
 const date = document.querySelector("#date");
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+darkModeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+    } else {
+        document.body.removeAttribute('data-theme');
+    }
+});
+
 // add fixed class to navbar
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 80) {
@@ -20,3 +30,22 @@ closeBtn.addEventListener("click", function () {
 });
 // set year
 date.innerHTML = new Date().getFullYear();
+
+
+let counter = 0;
+const textList = ['Programmer', 'Graphic Designer', 'Web Developer', 'Web Designer'];
+const animatedText = document.querySelector("#animatedText");
+
+setInterval(changeText, 3000);
+
+function changeText () {
+    animatedText.innerHTML = textList[counter];
+    counter++;
+    if(counter >= textList.length) {
+        counter = 0;
+    }
+}
+
+
+
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Doe || Projects</title>
+    <title>Ayooluwa's portfolio || Projects</title>
     <link
       rel="stylesheet"
       href="./fontawesome-free-5.12.1-web/css/all.min.css"
@@ -18,70 +18,106 @@
       <div class="nav-center">
         <!-- nav header -->
         <div class="nav-header">
-          <img src="./images/logo.svg" class="nav-logo" alt="" />
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+          <img src="./images/logo (2).png" class="nav-logo" alt="nav logo" />
           <button class="nav-btn" id="nav-btn">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <!-- nav links -->
+        </div>
+        <!-- nav-links -->
         <ul class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="projects.html">projects</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <div data-aos="fade-down-right" data-aos-delay="500">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1000">
+            <li>
+            <a href="about.html">about</a>
+          </li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1500">
+           <li>
+            <a href="projects.html">projects</a>
+          </li> 
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+           <li>
+            <a href="contact.html">contact</a>
+          </li> 
+          </div>                  
         </ul>
       </div>
     </nav>
     <!-- end of navbar -->
+    <!--dark mode-->
+
+    <div class="dark-mode-switch larger-screens">
+      <input type="checkbox" id="darkModeToggle">
+      <label for="darkModeToggle" class="toggle"></label>
+    </div>
+
     <!-- sidebar -->
     <aside class="sidebar" id="sidebar">
       <div>
-        <button id="close-btn" class="close-btn">
+        <button class="close-btn" id="close-btn">
           <i class="fas fa-times"></i>
         </button>
+        <!-- nav-links -->
         <ul class="sidebar-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="projects.html">projects</a></li>
-          <li><a href="contact.html">contact</a></li>
-        </ul>
-        <ul class="social-icons">
-          <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="projects.html">projects</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <!-- social icons -->
+        
+        
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com" class="social-icon">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
-          <!-- end of single item -->
-          <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
-          <!-- end of single item -->
-          <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-squarespace"></i>
+            <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+              <i class="fab fa-twitter"></i>
             </a>
           </li>
-          <!-- end of single item -->
-          <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-behance"></i>
+            <a href="https://github.com/Ay00luwwa" class="social-icon">
+              <i class="fab fa-github"></i>
             </a>
           </li>
-          <!-- end of single item -->
-          <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.instagram.com" class="social-icon">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
-          <!-- end of single item -->
         </ul>
+
+        <div class="smaller-screens">
+          <input type="checkbox" id="darkModeToggle">
+          <label for="darkModeToggle" class="toggle"></label>
+        </div>  
+        
       </div>
     </aside>
     <!-- end of sidebar -->
@@ -90,6 +126,7 @@
     <!-- ############## -->
     <!-- ############## -->
     <!-- ############## -->
+
     <header class="projects-hero">
       <!-- section title -->
       <div class="section-title">
@@ -98,34 +135,128 @@
       </div>
       <!--end of section title -->
     </header>
+    <section class="projects-section"> 
     <section class="section">
       <div class="section-center projects-page-center">
         <!-- single project -->
         <article class="single-project">
           <div class="project-container">
-            <img src="./images/project-1.jpeg" alt="single project" />
-            <a href="https://www.johnsmilga.com" class="project-icon">
-              <i class="fas fa-home"></i>
+            <img src="./images/main-bcg.jpeg" alt="single project" />
+            <a href="https://ayooluwas-tea-station.netlify.app//" class="project-icon" target="_blank">
+              <i class="fas fa-box"></i>
             </a>
           </div>
           <div class="project-details">
-            <h4>project name</h4>
+            <h4>Tea-shop</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              eveniet amet odit aperiam, provident cum possimus sapiente minus
-              quos! Ipsum?
+              A tea station that serves her customers online. It was
+               built with HTML, CSS and JavaScript.
+              Check out the station by clicking the home button.
             </p>
             <div class="project-footer">
               <span>
                 <i class="fab fa-github"></i>
               </span>
-              <a href="https://www.github.com">source code</a>
+              <a href="https://github.com/Ay00luwwa/Tea-shop">source code</a>
             </div>
           </div>
         </article>
         <!-- end of single project -->
       </div>
-    </section>
+
+
+      <section>
+        <div class="section-center projects-page-center">
+          <!-- single project -->
+          <article class="single-project">
+            <div class="project-container">
+              <img src="./images/G.O.E.jpg" alt="single project" />
+              <a href=" " class="project-icon" target="_blank">
+                <i class="fas fa-home"></i>
+              </a>
+            </div>
+            <div class="project-details">
+              <h4>Church banner</h4>
+              <p>
+                Church banner designed using Adobe express
+              </p>
+              <div class="project-footer">
+                <span>
+                  <i class="fab fa-github"></i>
+                </span>
+                <a href="https://github.com/Ay00luwwa/G-Designs">source picture</a>
+              </div>
+            </div>
+          </article>
+          <!-- end of single project -->
+        </div> 
+  
+      </section>
+  
+  
+      <section>
+        <div class="section-center projects-page-center">
+          <!-- single project -->
+          <article class="single-project">
+            <div class="project-container">
+              <img src="./images/Figma project.jpg" alt="single project"/>
+              <a href=" " class="project-icon" target="_blank">
+                <i class="fab fa-android service-icon"></i>
+              </a>
+            </div>
+            <div class="project-details">
+              <h4>An eatery</h4>
+              <p>
+                Created using Figma. The welcome, sign-up, login and forgot 
+                password page
+              </p>
+              <div class="project-footer">
+                <span>
+                  <i class="fab fa-github"></i>
+                </span>
+                <a href="https://www.figma.com/file/3KLzrP4uBdDALrpGmZO97x/W.S.L.F-for-an-eatery?type=design&node-id=1%3A44&mode=design&t=zNGoedBYlgiF3kCd-1">source design</a>
+              </div>
+            </div>
+          </article>
+          <!-- end of single project -->
+        </div> 
+  
+        <section>
+          <div class="section-center projects-page-center">
+            <!-- single project -->
+            <article class="single-project">
+              <div class="project-container">
+                <img src="./images/portfolio img.jpg" alt="single project" />
+                <a href="https://ayooluwas-tea-station.netlify.app//" class="project-icon" target="_blank">
+                  <i class="fas fa-box"></i>
+                </a>
+              </div>
+              <div class="project-details">
+                <h4>My portfolio</h4>
+                <p>
+                  My portfolio created by AyoIji, with the use of HTML, CSS, 
+                  Javascript, and animation libraries for animation, icon moon app for 
+                  icons
+                </p>
+                <div class="project-footer">
+                  <span>
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <a href="https://github.com/Ay00luwwa/Tea-shop">source code</a>
+                </div>
+              </div>
+            </article>
+            <!-- end of single project -->
+          </div>
+        </section>
+
+
+        </section>
+      </section>
+
+
+  </section>
+    
     <!-- ############## -->
     <!-- ############## -->
     <!-- ############## -->
@@ -136,42 +267,42 @@
       <ul class="social-icons">
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-facebook"></i>
+          <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+            <i class="fab fa-twitter"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-squarespace"></i>
+          <a href="https://github.com/Ay00luwwa" class="social-icon">
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-behance"></i>
+          <a href="https://www.ijidakinroayooluwa@gmail.com" class="social-icon">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.instagram.com" class="social-icon">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
         <!-- end of single item -->
       </ul>
 
-      <p>&copy; <span id="date"></span> John Doe. All rights reserved.</p>
+      <p>&copy; <span id="date"></span> Ayooluwa Iji. All rights reserved.</p>
     </footer>
     <script src="./js/app.js"></script>
   </body>

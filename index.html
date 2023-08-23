@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Doe || Home</title>
+    <title>Ayooluwa's portfolio || Home</title>
     <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="./fontawesome-free-5.12.1-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!--Animation library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!---favicon-->
+
+    <link rel="icon" href="./images/logo (2).png" type="png">
   </head>
   <body>
     <!-- navbar -->
@@ -18,29 +24,49 @@
       <div class="nav-center">
         <!-- nav header -->
         <div class="nav-header">
-          <img src="./images/logo.svg" class="nav-logo" alt="nav logo" />
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+          <img src="./images/logo (2).png" class="nav-logo" alt="nav logo" />
           <button class="nav-btn" id="nav-btn">
             <i class="fas fa-bars"></i>
           </button>
         </div>
+        </div>
         <!-- nav-links -->
         <ul class="nav-links">
+          <div data-aos="fade-down-right" data-aos-delay="500">
           <li>
             <a href="index.html">home</a>
           </li>
-          <li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1000">
+            <li>
             <a href="about.html">about</a>
           </li>
-          <li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1500">
+           <li>
             <a href="projects.html">projects</a>
-          </li>
-          <li>
+          </li> 
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+           <li>
             <a href="contact.html">contact</a>
-          </li>
+          </li> 
+          </div>                  
         </ul>
       </div>
     </nav>
     <!-- end of navbar -->
+    <!--dark mode-->
+
+    <div class="dark-mode-switch larger-screens">
+      <input type="checkbox" id="darkModeToggle">
+      <label for="darkModeToggle" class="toggle"></label>
+    </div>
+
     <!-- sidebar -->
     <aside class="sidebar" id="sidebar">
       <div>
@@ -63,86 +89,104 @@
           </li>
         </ul>
         <!-- social icons -->
+        
+        
         <ul class="social-icons">
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.facebook.com" class="social-icon">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-squarespace"></i>
+            <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+              <i class="fab fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-behance"></i>
+            <a href="https://github.com/Ay00luwwa" class="social-icon">
+              <i class="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.instagram.com" class="social-icon">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
         </ul>
+
+        <div class="smaller-screens">
+          <input type="checkbox" id="darkModeToggle">
+          <label for="darkModeToggle" class="toggle"></label>
+        </div>  
+        
       </div>
     </aside>
     <!-- end of sidebar -->
     <!-- header -->
     <header class="hero">
       <div class="section-center hero-center">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
         <article class="hero-info">
           <div class="underline"></div>
-          <h1>i'm john</h1>
-          <h4>freelance web & mobile UI/UX Designer</h4>
+          <h1>i'm Ayooluwa Ijidakinro</h1>
+          <h4>Web Designer and Developer, <br>Programmer and Graphic Designer</br></h4>
           <a href="contact.html" class="btn hero-btn">hire me</a>
           <!-- social icons -->
           <ul class="social-icons hero-icons">
             <li>
-              <a href="https://www.twitter.com" class="social-icon">
+              <a href="https://www.facebook.com" class="social-icon">
                 <i class="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.twitter.com" class="social-icon">
+              <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
                 <i class="fab fa-linkedin"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.twitter.com" class="social-icon">
-                <i class="fab fa-squarespace"></i>
+              <a href="https://github.com/Ay00luwwa" class="social-icon">
+                <i class="fab fa-github"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.twitter.com" class="social-icon">
-                <i class="fab fa-behance"></i>
+              <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+                <i class="fab fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="https://www.twitter.com" class="social-icon">
+              <a href="https://www.instagram.com" class="social-icon">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
           </ul>
         </article>
+        </div>
+        <div data-aos="flip-down" data-aos-easing="ease-in-sine" data-aos-duration="2900">
         <article class="hero-img">
-          <img src="./images/hero-img.jpeg" class="hero-photo" alt="john doe" />
+          <img src="./images/ayooluwa3(3).jpg" class="hero-photo" alt="ayooluwa😁" />
         </article>
+        </div>
       </div>
+
     </header>
     <!-- end of header -->
     <!-- about -->
+    
+    <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-delay="900"
+     data-aos-easing="ease-in-sine">
     <section class="section about">
       <div class="section-center about-center">
         <!-- about img -->
         <article class="about-img">
           <img
-            src="./images/about-img.jpeg"
+            src="./images/ayooluwa 4.jpg"
             class="hero-photo"
             alt="about img"
           />
@@ -156,25 +200,94 @@
           </div>
           <!--end of section title -->
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quae,
-            eum maiores est enim earum fugiat aspernatur. Fuga qui iste amet
-            reiciendis possimus rerum omnis recusandae molestias error
-            consequuntur, doloribus inventore reprehenderit officiis. Dolore
-            aut, repellendus eius fugiat numquam cumque.
+            Ijidakinro Ayooluwa Tioluwanimi, is a web developer and an aspiring programmer,
+            vesratile in the use of HTML/CSS, python, Django, Django rest framework, Javascript
+            and also a graphic design My wide knowledge and expertise of softwares and programming languages
+            makes me deliver to clients dynamic and interactive websites with outsanding results.
+            My commitment to staying up-to-date with the latest technologies and design trends in
+            web development and graphic design helps me to provide the best possible service to clients.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quae,
-            eum maiores est enim earum fugiat aspernatur. Fuga qui iste amet
-            reiciendis possimus rerum omnis recusandae molestias error
-            consequuntur, doloribus inventore reprehenderit officiis. Dolore
-            aut, repellendus eius fugiat numquam cumque.
-          </p>
+
           <a href="about.html" class="btn">about me</a>
         </article>
       </div>
     </section>
+  </div>
     <!-- end of about -->
     <!-- services -->
+
+
+    <!-- skills -->
+    <section class="section skills">
+      <h2>Skills</h2>
+      <div class="underline"></div>
+      <div class="skills-grid">
+        <div data-aos="zoom-out-right" data-aos-delay="1000">
+          <div class="skill-item">
+            <img src="./images/python.svg" alt="">
+            <p>Python</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="1200">
+         <div class="skill-item">
+            <img src="./images/css.svg" alt="">
+            <p>CSS</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="1400">
+        <div class="skill-item">
+          <img src="./images/tailwind.png" alt="">
+           <p>Tailwind css</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="1600">
+        <div class="skill-item">
+            <img src="./images/html.svg" alt="">
+            <p>HTML</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="1800">
+        <div class="skill-item">
+          <img src="./images/javascript.svg" alt="">
+            <p>JavaScript</p>
+        </div> 
+      </div> 
+      <div data-aos="zoom-out-right" data-aos-delay="2000">
+          <div class="skill-item">
+            <img src="./images/django.svg" alt="Djang0-icn">
+            <p>Django</p>
+          </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="2200">
+        <div class="skill-item">
+          <img src="./images/github.svg" alt="">
+          <p>Github</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="2400">
+        <div class="skill-item">
+          <img src="./images/photoshop.svg" alt="">
+          <p>Photoshop</p>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" data-aos-delay="2600">
+        <div class="skill-item">
+          <img src="./images/adobe express.svg" alt="">
+          <p>Adobe Express</p>
+        </div>
+      </div>
+        <!-- ... Add more skill-items as needed ... -->
+    </div>
+    
+      
+      
+      
+    </section>
+    <!-- end of skills -->
+
+
+
+
     <section class="section bg-grey">
       <!-- section title -->
       <div class="section-title">
@@ -184,40 +297,58 @@
       <!--end of section title -->
       <div class="services-center section-center">
         <!-- single service -->
+        <div class="grid-item" data-aos="flip-left" data-aos-delay="500">
         <article class="service">
           <i class="fas fa-code service-icon"></i>
-          <h4>web development</h4>
+          <h4>web development and design</h4>
           <div class="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
+            I am a highly skilled and motivated web developer with some years of experience 
+            in designing and developing dynamic websites and web applications. With expertise 
+            in HTML, CSS, JavaScript, and React, with the addition of Figma for the creation of
+            user interfaces and user experience (UI/UX) before delving into the development of web apps.
+            I have a proven track record of delivering high-quality code and creating intuitive user experiences.
+            I am passionate about staying up-to-date with the latest industry trends and applying
+            best practices to my work.
+           
           </p>
         </article>
+        </div>
         <!-- end of single service -->
         <!-- single service -->
-        <article class="service">
-          <i class="fab fa-sketch service-icon"></i>
-          <h4>web design</h4>
-          <div class="underline"></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
-          </p>
-        </article>
-        <!-- end of single service -->
-        <!-- single service -->
+        <div class="grid-item" data-aos="flip-left" data-aos-delay="1000">
         <article class="service">
           <i class="fab fa-android service-icon"></i>
-          <h4>app design</h4>
+          <h4>programming</h4>
           <div class="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
+            I am a skilled and dedicated programmer with a passion for solving complex problems
+            and creating efficient solutions. With over 2 years of experience in programming languages 
+            such as Python and Javascript. I have a strong foundation in software development principles
+            and practices. I thrive in collaborative environments and enjoy working on diverse projects 
+            that challenge me to expand my knowledge and skills. Learning more, making mistakes 
+            on the field has always been inevitable. Ability to write codes on fewer lines, which
+            becomes efficient and debug has always been a priority for me.
           </p>
         </article>
+        </div>
+        <!-- end of single service -->
+        <!-- single service -->
+        <div class="grid-item" data-aos="flip-left" data-aos-delay="1500">
+        <article class="service">
+          <h4>Graphic Designer</h4>
+          <i class="fab fa-sketch service-icon"></i>
+          <div class="underline"></div>
+          <p>
+            I am a highly creative and detail-oriented graphic designer with a passion 
+            for visual storytelling and creating captivating designs. With years
+            of experience in the industry, I specialize in branding, print design, and
+            digital media. I possess a strong understanding of design principles, color theory, 
+            and typography, and I excel in translating client's visions into visually 
+            stunning and impactful designs
+          </p>
+        </article>
+        </div>
         <!-- end of single service -->
       </div>
     </section>
@@ -229,11 +360,7 @@
         <h2>latest works</h2>
         <div class="underline"></div>
         <p class="projects-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          repudiandae cupiditate ea facilis incidunt, non sapiente! Debitis
-          magnam, earum assumenda obcaecati cum quaerat facere ratione molestiae
-          dignissimos aliquid blanditiis architecto voluptates delectus
-          voluptate animi nulla! Autem explicabo perspiciatis officia ea.
+          Behold some of my latest works.
         </p>
       </div>
       <!--end of section title -->
@@ -242,13 +369,13 @@
         <a href="projects.html" class="project-1">
           <article class="project">
             <img
-              src="./images/project-1.jpeg"
+              src="./images/G.O.E.jpg"
               alt="single project"
               class="project-img"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Anniversary banner</h4>
+              <p>RCCG(Jubilee Chapel)</p>
             </div>
           </article>
         </a>
@@ -270,14 +397,11 @@
         <!-- end of single project --><!-- single project -->
         <a href="projects.html" class="project-3">
           <article class="project">
-            <img
-              src="./images/project-3.jpeg"
-              alt="single project"
-              class="project-img"
-            />
+            <img src="./images/portfolio img.jpg" alt="single project"
+              class="project-img"/>
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>My portfolio</h4>
+              <p>Ayooluwa Ijidakinro</p>
             </div>
           </article>
         </a>
@@ -285,13 +409,13 @@
         <a href="projects.html" class="project-4">
           <article class="project">
             <img
-              src="./images/project-4.jpeg"
+              src="./images/main-bcg.jpeg"
               alt="single project"
               class="project-img"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Tea station</h4>
+              <p>ayooluwas-tea-station</p>
             </div>
           </article>
         </a>
@@ -320,100 +444,15 @@
         </div>
         <!--end of section title -->
         <p class="video-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-          perferendis exercitationem sit. Beatae eius commodi officiis rem
-          soluta ratione dignissimos quisquam tempore laudantium, porro vitae
-          cupiditate dicta magni quas corrupti aperiam, rerum minus odio totam
-          repellendus delectus nostrum veniam!
+          I believe in the power of collaboration and the 
+          opportunity to create something amazing together
         </p>
         <a href="contact.html" class="btn">contact me</a>
       </div>
     </section>
     <!-- end of connect -->
-    <!-- skills -->
-    <section class="section skills">
-      <!-- section title -->
-      <div class="section-title">
-        <h2>skills</h2>
-        <div class="underline"></div>
-      </div>
-      <!--end of section title -->
-      <div class="section-center skills-center">
-        <article>
-          <h3>front end</h3>
-          <!-- single skill -->
-          <div class="skill">
-            <p>HTML/CSS</p>
-            <div class="skill-container">
-              <div class="skill-value"></div>
-              <p class="skill-text">
-                50%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-          <!-- single skill -->
-          <div class="skill">
-            <p>Javascript</p>
-            <div class="skill-container">
-              <div class="skill-value value-70"></div>
-              <p class="skill-text skill-text-70">
-                70%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-          <!-- single skill -->
-          <div class="skill">
-            <p>React</p>
-            <div class="skill-container">
-              <div class="skill-value value-80"></div>
-              <p class="skill-text skill-text-80">
-                80%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-        </article>
-        <article>
-          <h3>back end</h3>
-          <!-- single skill -->
-          <div class="skill">
-            <p>Node</p>
-            <div class="skill-container">
-              <div class="skill-value"></div>
-              <p class="skill-text">
-                50%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-          <!-- single skill -->
-          <div class="skill">
-            <p>PHP</p>
-            <div class="skill-container">
-              <div class="skill-value value-70"></div>
-              <p class="skill-text skill-text-70">
-                70%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-          <!-- single skill -->
-          <div class="skill">
-            <p>Python</p>
-            <div class="skill-container">
-              <div class="skill-value value-80"></div>
-              <p class="skill-text skill-text-80">
-                80%
-              </p>
-            </div>
-          </div>
-          <!--end of  single skill -->
-        </article>
-      </div>
-    </section>
-    <!-- end of skills -->
+
+
     <!-- timeline -->
     <section class="section timeline">
       <!-- section title -->
@@ -508,7 +547,7 @@
     <section class="section blog">
       <!-- section title -->
       <div class="section-title">
-        <h2>blog</h2>
+        <h2>Certificates</h2>
         <div class="underline"></div>
       </div>
       <!--end of section title -->
@@ -517,47 +556,44 @@
         <div class="card">
           <!-- front of the card -->
           <div class="card-side card-front">
-            <img src="./images/project-1.jpeg" alt="" />
+            <img src="./images/Python certificate.jpg" alt="" />
             <div class="card-info">
-              <h4>article title</h4>
+              <h4>Python course</h4>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
+                Complete course on Python 
               </p>
               <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
-                <p>7 min read</p>
+                <img src="./images/ayooluwa-small.jpg" alt="author image" />
+                <p>31 hrs course</p>
               </div>
             </div>
-          </div>
-          <!-- card back  -->
+            <!-- card back  -->
           <div class="card-side card-back">
-            <button class="btn">read more</button>
+            <a href="https://www.udemy.com/"><button class="btn">get courses <br> like this</button></a>
           </div>
+          </div>
+          
         </div>
         <!-- end of single article -->
         <!-- single article -->
         <div class="card">
           <!-- front of the card -->
           <div class="card-side card-front">
-            <img src="./images/project-2.jpeg" alt="" />
+            <img src="./images/HTML&CSS cert.jpg" alt="" />
             <div class="card-info">
-              <h4>article title</h4>
+              <h4>Course on HTML and CSS</h4>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
+                Complete course on HTML nad CSS(Flexbox and Grid)
               </p>
               <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
-                <p>7 min read</p>
+                <img src="images/ayooluwa-small.jpg" alt="author image" />
+                <p>40 hrs course</p>
               </div>
             </div>
           </div>
           <!-- card back  -->
           <div class="card-side card-back">
-            <button class="btn">read more</button>
+            <a href="https://www.udemy.com/"><button class="btn">get courses <br> like this</button></a>
           </div>
         </div>
         <!-- end of single article -->
@@ -574,7 +610,7 @@
                 Natus, provident.
               </p>
               <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
+                <img src="./images/ayooluwa-small.jpg" alt="author image" />
                 <p>7 min read</p>
               </div>
             </div>
@@ -598,7 +634,7 @@
                 Natus, provident.
               </p>
               <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
+                <img src="./images/ayooluwa-small.jpg" alt="author image" />
                 <p>7 min read</p>
               </div>
             </div>
@@ -617,34 +653,43 @@
       <!-- social icons -->
       <ul class="social-icons">
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-facebook"></i>
+          <a href="https://www.ijidakinroayooluwa@gmail.com" class="social-icon" target="_blank">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-squarespace"></i>
+          <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+            <i class="fab fa-twitter"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-behance"></i>
+          <a href="https://github.com/Ay00luwwa" class="social-icon">
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.instagram.com" class="social-icon">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
       </ul>
 
-      <p>&copy; <span id="date"></span> john doe. all rights reserved</p>
+      <p>&copy; <span id="date"></span> Ijidakinro Ayooluwa. all rights reserved</p>
     </footer>
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
   </body>
 </html>

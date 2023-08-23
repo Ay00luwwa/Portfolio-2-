@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Doe || Contact</title>
+    <title>Ayooluwa's portfolio || Contact</title>
     <link
       rel="stylesheet"
       href="./fontawesome-free-5.12.1-web/css/all.min.css"
     />
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,21 +19,48 @@
       <div class="nav-center">
         <!-- nav header -->
         <div class="nav-header">
-          <img src="./images/logo.svg" class="nav-logo" alt="" />
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+          <img src="./images/logo (2).png" class="nav-logo" alt="nav logo" />
           <button class="nav-btn" id="nav-btn">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <!-- nav links -->
+        </div>
+        <!-- nav-links -->
         <ul class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="projects.html">projects</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <div data-aos="fade-down-right" data-aos-delay="500">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1000">
+            <li>
+            <a href="about.html">about</a>
+          </li>
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="1500">
+           <li>
+            <a href="projects.html">projects</a>
+          </li> 
+          </div>
+
+          <div data-aos="fade-down-right" data-aos-delay="2000">
+           <li>
+            <a href="contact.html">contact</a>
+          </li> 
+          </div>
+          
         </ul>
       </div>
     </nav>
+    
     <!-- end of navbar -->
+    <div class="dark-mode-switch larger-screens">
+      <input type="checkbox" id="darkModeToggle">
+      <label for="darkModeToggle" class="toggle"></label>
+    </div>
     <!-- sidebar -->
     <aside class="sidebar" id="sidebar">
       <div>
@@ -48,40 +76,44 @@
         <ul class="social-icons">
           <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.facebook.com" class="social-icon">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
           <!-- end of single item -->
           <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
           <!-- end of single item -->
           <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-squarespace"></i>
+            <a href="https://github.com/Ay00luwwa" class="social-icon">
+              <i class="fab fa-github"></i>
             </a>
           </li>
           <!-- end of single item -->
           <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-behance"></i>
+            <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+              <i class="fab fa-twitter"></i>
             </a>
           </li>
           <!-- end of single item -->
           <!-- single item -->
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.instagram.com/ayomi_904/" class="social-icon">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
           <!-- end of single item -->
         </ul>
+        <div class="smaller-screens">
+          <input type="checkbox" id="darkModeToggle">
+          <label for="darkModeToggle" class="toggle"></label>
+        </div>  
       </div>
     </aside>
     <!-- end of sidebar -->
@@ -102,13 +134,20 @@
         <!-- contact page-->
         <p>
           If you are looking to get ahold of me, you can send me an email at
-          <a href="mailto:email@email.com">@your_email</a>
+          <a href="mailto:email@email.com">ijidakinroayooluwa@gmail.com</a>
         </p>
         <p>
-          You can also reach me on Twitter at
-          <a href="https://www.twitter.com">@your_social_media </a>
+          You can also reach me on Whatsapp 
+          <a href="https://www.whatsapp.com">(+234) 90 6771 1784</a>
         </p>
       </div>
+
+      <div class="centered-item">
+        <button class="button-3d">
+          <a href=""><p>Download my CV</p></a>
+        </button>
+      </div>
+      
     </section>
     <!-- ############## -->
     <!-- ############## -->
@@ -120,43 +159,47 @@
       <ul class="social-icons">
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-facebook"></i>
+          <a href="https://twitter.com/AyooluwaToluwa2" class="social-icon">
+            <i class="fab fa-twitter"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.linkedin.com/in/ijidakinro-ayooluwa-60464326a/" class="social-icon">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-squarespace"></i>
+          <a href="https://github.com/Ay00luwwa/" class="social-icon">
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-behance"></i>
+          <a href="https://www.ijidakinroayooluwa@gmail.com" class="social-icon">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
         </li>
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.instagram.com" class="social-icon">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
         <!-- end of single item -->
       </ul>
 
-      <p>&copy; <span id="date"></span> John Doe. All rights reserved.</p>
+      <p>&copy; <span id="date"></span> Ayooluwa Iji. All rights reserved.</p>
     </footer>
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+  </script>
   </body>
 </html>
