@@ -52,8 +52,8 @@ Variables
 [data-theme='dark'] {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(43, 77%, 83%);
-  --clr-primary-2: hsl(43, 72%, 73%);
-  --clr-primary-3: hsl(43, 78%, 63%);
+  --clr-primary-2: #ecd089;
+  --clr-primary-3: hsl(43, 79%, 63%);
   --clr-primary-4: hsl(42, 72%, 40%);
   /* primary/main color */
   --clr-primary-5: hsl(43, 90%, 40%);
@@ -1121,11 +1121,15 @@ Single Page
   color: var(--clr-primary-1);
 }
 
+
+
+
 /*
 =============== 
 Projects Page
 ===============
 */
+
 .projects-hero {
   height: 40vh;
   background: var(--clr-primary-10);
@@ -1133,8 +1137,6 @@ Projects Page
   place-items: center;
   margin-left: 40px;
 }
-
-
 
 .projects-hero .section-title {
   margin-bottom: 0;
@@ -1155,7 +1157,7 @@ Projects Page
 }
 .project-container {
   position: relative; 
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   justify-content: center;
 }
