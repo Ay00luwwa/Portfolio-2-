@@ -1047,6 +1047,7 @@ Blog
 }
 .card-front img {
   height: 13rem;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: var(--radius);
