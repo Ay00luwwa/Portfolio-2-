@@ -1132,6 +1132,26 @@ Single Page
 Projects Page
 ===============
 */
+.section-center {
+  margin-left: 1rem;  /* Reduced margin for mobile */
+}
+
+.projects-page-center {
+  display: grid;
+  grid-template-columns: 1fr; /* Takes full width on mobile */
+  gap: 2rem;
+}
+
+/* Adjusting for larger screens */
+@media screen and (min-width: 768px) {
+  .section-center {
+    margin-left: 7rem;  /* Original margin for larger screens */
+  }
+
+  .projects-page-center {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
 
 .projects-hero {
   height: 40vh;
@@ -1148,8 +1168,16 @@ Projects Page
 .single-project {
   background: var(--clr-grey-10);
   border-radius: var(--radius);
-  box-shadow:  5px 5px 10px 0px #888888;  
+  box-shadow:  5px 5px 10px 0px #888888;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
 }
+
+.single-project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 .project-container img {
   border-top-left-radius: var(--radius);
@@ -1198,12 +1226,6 @@ Projects Page
 }
 .project-footer a:hover {
   color: var(--clr-primary-1);
-}
-.projects-page-center {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 3rem 1rem;
-  margin-bottom: 40px;
 }
 
 
