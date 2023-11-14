@@ -12,6 +12,38 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
+
+      <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
   <body>
     <!-- navbar -->
     <nav class="nav" id="nav">
@@ -261,14 +293,15 @@
 
                   <!-- single project -->
           <article class="single-project">
-            <div class="project-container">
+            <div class="project-container popup" id="popup">
+              <span onclick="closePopup()" style="cursor: pointer; float: right;">&times;</span>
               <img src="./images/G.W.AP.jpg" alt="single project" />
               <a href="#" class="project-icon" target="_blank">
                 <i class="fas fa-home"></i>
               </a>
             </div>
             <div class="project-details">
-              <h4>Random Quote Generator</h4>
+              <h4>Logo for a God's Well Art Production, created using photoshop.</h4>
               <p>
                  Sample Logo design
               </p>
@@ -276,10 +309,12 @@
                 <span>
                   <i class="fab fa-github"></i>
                 </span>
-                <a href="#">View image</a>
+                <a href="#" onclick="openPopup()">View image</a>
               </div>
             </div>
           </article>
+
+        <div id="overlay" class="overlay"></div>
           <!-- end of single project -->
 
             </div>
@@ -334,5 +369,16 @@
       <p>&copy; <span id="date"></span> Ayooluwa Iji. All rights reserved.</p>
     </footer>
     <script src="./js/app.js"></script>
+    <script>
+    function openPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
   </body>
 </html>
